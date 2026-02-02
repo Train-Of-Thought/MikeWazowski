@@ -34,7 +34,11 @@ public class javagui extends javax.swing.JFrame {
         login = new javax.swing.JButton();
         register = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        login1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,14 +47,13 @@ public class javagui extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("LIBRARY MANAGEMENT SYSTEM");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 37, -1, -1));
 
-        jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 110));
+        jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 780, 60));
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -60,17 +63,17 @@ public class javagui extends javax.swing.JFrame {
 
         login.setBackground(new java.awt.Color(0, 51, 51));
         login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setText("Login");
+        login.setText("LOGIN");
         login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginActionPerformed(evt);
             }
         });
-        jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 90, 40));
+        jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 90, 40));
 
         register.setBackground(new java.awt.Color(0, 51, 51));
         register.setForeground(new java.awt.Color(255, 255, 255));
-        register.setText("Register");
+        register.setText("REGISTER");
         register.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 registerMouseClicked(evt);
@@ -81,13 +84,36 @@ public class javagui extends javax.swing.JFrame {
                 registerActionPerformed(evt);
             }
         });
-        jPanel3.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 90, 40));
+        jPanel3.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 90, 40));
 
-        jLabel3.setText("If you already made an account!");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, -1, -1));
+        jLabel3.setText("If you wanna learn more about us. Click here!");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, -1, -1));
 
-        jLabel4.setText("If you still haven't made an account yet!");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel5.setText("LIBRARY MANAGEMENT SYSTEM");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 37, -1, -1));
+
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 110));
+
+        jLabel6.setText("If you still haven't made an account yet!");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
+
+        jLabel7.setText("If you already made an account!");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, -1, -1));
+
+        login1.setBackground(new java.awt.Color(0, 51, 51));
+        login1.setForeground(new java.awt.Color(255, 255, 255));
+        login1.setText("ABOUT US");
+        login1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                login1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 90, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,7 +123,7 @@ public class javagui extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -118,6 +144,10 @@ public class javagui extends javax.swing.JFrame {
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_registerMouseClicked
+
+    private void login1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_login1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,11 +188,15 @@ public class javagui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton login;
+    private javax.swing.JButton login1;
     private javax.swing.JButton register;
     // End of variables declaration//GEN-END:variables
 }

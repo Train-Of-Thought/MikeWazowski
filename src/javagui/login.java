@@ -168,7 +168,7 @@ public class login extends javax.swing.JFrame {
         config config = new config();
 
 String sql =
-    "SELECT r_id, r_fname, r_lname, r_email, r_type " +
+    "SELECT r_id, r_type " +
     "FROM tbl_register " +
     "WHERE r_email = ? AND r_password = ? AND r_status = 'ACTIVE'";
 
@@ -182,13 +182,21 @@ try (Connection conn = config.connectDB();
 
     if (rs.next()) {
 
-    session.userId = rs.getInt("r_id");   // ⭐ THIS LINE
-    session.userType = rs.getString("r_type").trim();
+        // Save user info for later use in dashboards
+        session.userId = rs.getInt("r_id");
+        session.userType = rs.getString("r_type").trim();
 
-    JOptionPane.showMessageDialog(null, "Login Success!");
+        JOptionPane.showMessageDialog(null, "Login Success!");
 
-    new user_dashboard().setVisible(true);
-    this.dispose();
+        // Redirect based on user type
+        if ("ADMIN".equalsIgnoreCase(session.userType)) {
+            new admin_dashboard().setVisible(true);
+        } else {
+            new user_dashboard().setVisible(true);
+        }
+
+        this.dispose();
+
     } else {
         JOptionPane.showMessageDialog(null, "Invalid Credentials");
     }
@@ -196,6 +204,7 @@ try (Connection conn = config.connectDB();
 } catch (Exception e) {
     e.printStackTrace();
 }
+
     }//GEN-LAST:event_loginActionPerformed
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
