@@ -78,6 +78,7 @@ public class admin_dashboard extends javax.swing.JFrame {
         jLabel7.setText("SYSTEM");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
         jButton1.setText("SETTINGS");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {

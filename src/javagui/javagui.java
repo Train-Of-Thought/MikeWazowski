@@ -39,6 +39,9 @@ public class javagui extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         login1 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,7 +64,7 @@ public class javagui extends javax.swing.JFrame {
         jLabel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, -1, -1));
 
-        login.setBackground(new java.awt.Color(0, 51, 51));
+        login.setBackground(new java.awt.Color(0, 0, 0));
         login.setForeground(new java.awt.Color(255, 255, 255));
         login.setText("LOGIN");
         login.addActionListener(new java.awt.event.ActionListener() {
@@ -69,9 +72,9 @@ public class javagui extends javax.swing.JFrame {
                 loginActionPerformed(evt);
             }
         });
-        jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 90, 40));
+        jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 90, 40));
 
-        register.setBackground(new java.awt.Color(0, 51, 51));
+        register.setBackground(new java.awt.Color(0, 0, 0));
         register.setForeground(new java.awt.Color(255, 255, 255));
         register.setText("REGISTER");
         register.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -84,7 +87,7 @@ public class javagui extends javax.swing.JFrame {
                 registerActionPerformed(evt);
             }
         });
-        jPanel3.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 90, 40));
+        jPanel3.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 90, 40));
 
         jLabel3.setText("If you wanna learn more about us. Click here!");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, -1, -1));
@@ -105,7 +108,7 @@ public class javagui extends javax.swing.JFrame {
         jLabel7.setText("If you already made an account!");
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, -1, -1));
 
-        login1.setBackground(new java.awt.Color(0, 51, 51));
+        login1.setBackground(new java.awt.Color(0, 0, 0));
         login1.setForeground(new java.awt.Color(255, 255, 255));
         login1.setText("ABOUT US");
         login1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,13 +116,48 @@ public class javagui extends javax.swing.JFrame {
                 login1ActionPerformed(evt);
             }
         });
-        jPanel3.add(login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 90, 40));
+        jPanel3.add(login1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 90, 40));
+
+        jPanel5.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, 340));
+
+        jPanel6.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, -1, 340));
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,6 +232,9 @@ public class javagui extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton login;
     private javax.swing.JButton login1;
